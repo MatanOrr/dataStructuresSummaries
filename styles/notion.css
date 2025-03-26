@@ -21,8 +21,12 @@
   line-height: 1.65;
 }
 
-.index-page {
-  --notion-max-width: 900px;
+/* 
+Disabling it as it's causing issues with the layout */
+.notion-page .notion-page-content {
+  max-width: var(--notion-max-width);
+  margin: 0 auto;
+  padding: 0 1.5em;
 }
 
 .notion-text {
