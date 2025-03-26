@@ -410,3 +410,7 @@
   text-align: center;
   font-family: 'Rubik', var(--notion-font);
 }
+
+.notion-collection-column-title-icon {
+  margin-left: 0.5em;
+}

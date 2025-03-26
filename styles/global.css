@@ -13,6 +13,8 @@ body,
 html {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -62,6 +64,31 @@ body {
   background-color: var(--bg-color);
 }
 
+.notion-page-content {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+pre,
+code,
+.notion-code {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+img,
+video,
+iframe,
+.notion-asset-wrapper {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Adding hebrew support */
 .rtl-content {
   direction: rtl;
@@ -96,9 +123,10 @@ body {
 }
 
 .notion-table {
-  max-width: 200%;
   overflow-x: hidden;
-  display: block; /* for mobile */
+  max-width: 100% !important;
+  display: flex; /* for mobile */
+  margin-right: 3rem;
 }
 
 /* Hebrew Support */
@@ -164,6 +192,11 @@ html[dir='rtl'] .notion-page-icon-inline {
   margin-left: 4px;
 }
 
+html[dir='rtl'] .notion-page-icon-inline {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
 html[dir='rtl'] .notion-search-input {
   text-align: right;
   direction: rtl;
@@ -178,10 +211,6 @@ html[dir='rtl'] .notion-search-clear-button {
 html[dir='rtl'] .notion-callout-text {
   direction: rtl;
   text-align: right;
-}
-
-html[dir='rtl'] .notion-callout {
-  flex-direction: row-reverse;
 }
 
 html[dir='rtl'] .notion-callout .notion-page-icon-inline {
@@ -220,4 +249,12 @@ html[dir='rtl'] .notion-h2,
 html[dir='rtl'] .notion-h3,
 html[dir='rtl'] .notion-page-title {
   font-family: 'Rubik', var(--notion-font);
+}
+
+/* Prevent overflow hebrew blocks */
+html[dir='rtl'] .notion-page-content,
+.rtl-content .notion-page-content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
