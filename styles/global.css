@@ -124,9 +124,10 @@ iframe,
 
 .notion-table {
   overflow-x: hidden;
-  /* max-width: 100%; */
-  /* display: flex; */
-  /* margin-right: 3rem; */
+  max-width: 50%;
+  width: 80%;
+  display: flex;
+  margin-right: 3rem;
 }
 
 /* Hebrew Support */
