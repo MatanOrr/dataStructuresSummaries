@@ -98,5 +98,126 @@ body {
 .notion-table {
   max-width: 200%;
   overflow-x: hidden;
-  display: block; /* Important for mobile */
+  display: block; /* for mobile */
+}
+
+/* Hebrew Support */
+
+html[dir='rtl'] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir='rtl'] .notion {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir='rtl'] .notion-text {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir='rtl'] .notion-quote {
+  border-left: 0;
+  border-right: 4px solid #67bdfc;
+  padding: 0.2em 0.75em 0.2em 0;
+}
+
+html[dir='rtl'] .notion-list li {
+  padding-left: 0;
+  padding-right: 0.5em;
+}
+
+html[dir='rtl'] .notion-collection-row-property {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .notion-header .notion-nav-header {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .notion-nav-header-rhs {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .notion-header-breadcrumb {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .notion-search-button {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+html[dir='rtl'] .notion-collection-card-property {
+  direction: rtl;
+}
+
+html[dir='rtl'] .notion-aside-table-of-contents {
+  right: unset;
+  left: 2rem;
+}
+
+html[dir='rtl'] .notion-page-icon-inline {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+html[dir='rtl'] .notion-search-input {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir='rtl'] .notion-search-clear-button {
+  right: unset;
+  left: 12px;
+}
+
+/* Fix callout blocks */
+html[dir='rtl'] .notion-callout-text {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir='rtl'] .notion-callout {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .notion-callout .notion-page-icon-inline {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+html[dir='rtl'] .notion-list {
+  margin-right: 1em;
+  margin-left: 0;
+}
+
+html[dir='rtl'] .notion-table-of-contents-item {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Hebrew fonts, good for fallbacks */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+html[dir='rtl'] body {
+  --notion-font:
+    'Rubik', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
+  font-family: var(--notion-font);
+}
+
+html[dir='rtl'] .notion-title {
+  font-family: 'Rubik', var(--notion-font);
+}
+
+html[dir='rtl'] .notion-h1,
+html[dir='rtl'] .notion-h2,
+html[dir='rtl'] .notion-h3,
+html[dir='rtl'] .notion-page-title {
+  font-family: 'Rubik', var(--notion-font);
 }
