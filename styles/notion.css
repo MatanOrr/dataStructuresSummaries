@@ -400,6 +400,13 @@
   color: var(--fg-color-2);
 }
 
-.notion-equation.notion-equation-block{
+.notion-equation.notion-equation-block {
   align-items: center;
+}
+
+/* Hebrew Callout Block */
+.notion-block-1c2301c7d17980b6ac60d347d0b15643 {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Rubik', var(--notion-font);
 }
