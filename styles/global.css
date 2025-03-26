@@ -94,3 +94,9 @@ body {
   border-right: 4px solid #67bdfc;
   padding: 0.2em 0.75em 0.2em 0;
 }
+
+.notion-table {
+  max-width: 200%;
+  overflow-x: hidden;
+  display: block; /* Important for mobile */
+}

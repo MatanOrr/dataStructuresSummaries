@@ -404,9 +404,9 @@
   align-items: center;
 }
 
-/* Hebrew Callout Block */
+/* Hebrew Callout Block - Introduction Block */
 .notion-block-1c2301c7d17980b6ac60d347d0b15643 {
   direction: rtl;
-  text-align: right;
+  text-align: center;
   font-family: 'Rubik', var(--notion-font);
 }
